@@ -8,6 +8,8 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
+            - name: trigger actor
+              run: echo "${{ toJson(github.repository_owner)}}"
             - name: get code
               uses: actions/checkout@v3
             - name: install NodeJs
