@@ -5,4 +5,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: github context
-              run: echo "The person who triggered this pipeline is:${{ toJson(github.repository_owner)}}"
+              run: ${{ toJson(github.repository_owner)}}
